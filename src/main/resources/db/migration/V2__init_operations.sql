@@ -13,11 +13,9 @@ INSERT INTO operations (op_name, count) VALUES
 CREATE OR REPLACE FUNCTION increment_count()
 RETURNS TRIGGER AS $$
 BEGIN
-
 UPDATE operations
 SET count = count + 1
 WHERE op_name = NEW.operation;
-
 RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
