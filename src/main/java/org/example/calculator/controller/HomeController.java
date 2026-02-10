@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet("/")
 public class HomeController extends HttpServlet {
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("/pages/home.jsp").forward(request, response);
     }

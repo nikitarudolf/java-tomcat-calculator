@@ -9,11 +9,11 @@ import org.flywaydb.core.Flyway;
 public class FlywayMigrationListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
         Flyway flyway = Flyway.configure()
                 .dataSource("jdbc:postgresql://localhost:5432/postgres", "myuser", "admin")
                 .load();

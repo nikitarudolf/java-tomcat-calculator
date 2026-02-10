@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html lang="ru">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<html>
+<html lang="en">
 <head>
     <title>History</title>
 </head>

@@ -11,8 +11,8 @@ import java.io.IOException;
 
 @WebServlet("/history")
 public class HistoryController extends HttpServlet {
-    private final HistoryService history = new HistoryService();
-
+    private final transient HistoryService history = new HistoryService();
+@Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("history", history.get());
         request.getRequestDispatcher("/pages/history.jsp").forward(request, response);

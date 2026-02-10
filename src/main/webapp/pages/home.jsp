@@ -1,24 +1,23 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: nikit
-  Date: 09.02.2026
-  Time: 19:39
-  To change this template use File | Settings | File Templates.
---%>
+<!DOCTYPE html>
+<html lang="ru">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>Title</title>
 
 </head>
 <body>
 <form action="${pageContext.request.contextPath}/calc" method="post">
-    num 1: <label>
-    <input type="text" name="num1">
-</label><br>
-    num 2: <label>
+    <label>
+    <input type="text" name="num1" />
+         num 1
+    </label>
+    <br>
+     <label>
     <input type="text" name="num2">
-</label><br>
+         num 2
+    </label>
+    <br>
     <label>
         <select name="operation">
             <option value="sum">Sum (+)</option>

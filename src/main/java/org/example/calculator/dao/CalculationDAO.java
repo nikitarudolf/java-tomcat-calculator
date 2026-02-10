@@ -12,10 +12,11 @@ import java.util.List;
 
 public class CalculationDAO {
     public void save(CalculationEntity calc) {
-        try (Connection connection = DatabaseConfig.getConnection();){
+        try (Connection connection = DatabaseConfig.getConnection();
+             PreparedStatement preparedStatement = connection
+                .prepareStatement("INSERT INTO calculations(num1, num2, operation, result) VALUES (?,?,?,?) ");) {
+
             connection.setAutoCommit(false);
-            PreparedStatement preparedStatement = connection
-                    .prepareStatement("INSERT INTO calculations(num1, num2, operation, result) VALUES (?,?,?,?) ");
             preparedStatement.setDouble(1,calc.getA());
             preparedStatement.setDouble(2,calc.getB());
             preparedStatement.setString(3,calc.getOperation());

@@ -13,9 +13,9 @@ import java.io.IOException;
 
 @WebServlet("/calc")
 public class CalcController extends HttpServlet {
-    private final CalculatorService calculator = new CalculatorService();
-    private final HistoryService history = new HistoryService();
-
+    private final transient CalculatorService calculator = new CalculatorService();
+    private final transient HistoryService history = new HistoryService();
+@Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         double a = Double.parseDouble(request.getParameter("num1"));
         double b = Double.parseDouble(request.getParameter("num2"));
