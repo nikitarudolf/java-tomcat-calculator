@@ -1,6 +1,5 @@
 package org.example.calculator.entity;
 import lombok.*;
-import org.example.calculator.dto.CalculationDTO;
 
 import java.time.LocalDateTime;
 
@@ -14,24 +13,6 @@ public class CalculationEntity {
     private String operation;
     private double result;
     private LocalDateTime timestamp;
-
-    public static CalculationEntity fromDTO(CalculationDTO dto) {
-        return CalculationEntity.builder()
-                .a(dto.a())
-                .b(dto.b())
-                .operation(dto.operation())
-                .result(dto.result())
-                .build();
-    }
-
-    public CalculationDTO toDTO() {
-        return new CalculationDTO(
-                this.a,
-                this.b,
-                this.operation,
-                this.result
-        );
-    }
 }
 
 
