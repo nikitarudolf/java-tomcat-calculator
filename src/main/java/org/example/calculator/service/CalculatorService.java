@@ -1,4 +1,4 @@
-package Services;
+package org.example.calculator.service;
 
 public class CalculatorService {
     public double calculate(double a, double b, String type) {
